@@ -1,5 +1,5 @@
 {
-  "name": "goit-js-hw-11-color-switch",
+  "name": "goit-js-hw-12-countries",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
@@ -11,19 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreymashko7/goit-js-hw-11-color-switch"
+    "url": "git+https://github.com/andreymashko7/goit-js-hw-12-countries"
   },
   "keywords": [],
   "author": "Andrey Mashko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andreymashko7/goit-js-hw-11-color-switch/issues"
+    "url": "https://github.com/andreymashko7/goit-js-hw-12-countries/issues"
   },
-  "homepage": "https:https://andreymashko7.github.io/goit-js-hw-11-color-switch",
+  "homepage": "https:https://andreymashko7.github.io/goit-js-hw-12-countries",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
+    "@pnotify/core": "^5.1.2",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -50,6 +51,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "lodash.debounce": "^4.0.8"
   }
 }
