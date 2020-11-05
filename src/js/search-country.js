@@ -9,7 +9,6 @@ import '@pnotify/core/dist/PNotify.css';
 import { info, error } from '@pnotify/core'
 
 const refs = getRefs();
-let searchQuery = ''
  
 refs.inputEl.addEventListener(
    'input',
@@ -18,7 +17,7 @@ refs.inputEl.addEventListener(
 
 
 function onInputChange() {
-   searchQuery = refs.inputEl.value;
+  let searchQuery = refs.inputEl.value;
    console.log(searchQuery)
 
   if (!searchQuery) {
@@ -37,6 +36,7 @@ function onFetchSucces(data) {
 
   }
   else if (data.length >= 2 && data.length <= 10) {
+    enterFullName()
     renderCountryList(data);
     
   } else if (data.length > 10) {
@@ -49,6 +49,7 @@ function onFetchSucces(data) {
 function onFetchError() {
   error({
     text: "Please enter a more specific query!",
+    text: 'No result',
     delay: 1500,
   });
 
@@ -62,6 +63,14 @@ function toMatchCountries() {
   })
 
   clearMarkup();
+}
+
+function enterFullName() {
+   info({
+    text: 'Please enter a more specific query!',
+    delay: 1500,
+   })
+  clearMarkup()
 }
 
 function renderCountryMarkup(country) {
